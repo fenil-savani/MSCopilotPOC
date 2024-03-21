@@ -1,0 +1,48 @@
+openapi: 3.0.1
+info:
+  title: Test Copilot For SportMonks
+  description: This API is dedicated for sports enthusiasts. Retrieve all sports-related data using this API. Sportmonks offers standard REST APIs. Requests are sent with URLs, and responses will be returned in JSON format. Every authentication is handled by an API token.
+  version: 0.1.0
+servers:
+  - url: https://api.sportmonks.com/v3
+paths:
+  /football/fixtures:
+    get:
+      operationId: getFootballFixtures
+      summary: Get football fixtures
+      description: Retrieve information about football fixtures.
+      parameters:
+        - name: Authorization
+          in: header
+          description: Authentication token
+          required: false
+          schema:
+            type: string
+            default: YiTwwzncvgAwNF6lseiPtGIox2fYekzTxXsLuESeUIZzUnWtXwHY3zVzDZXP
+            format: string
+      responses:
+        "200":
+          description: Successful response
+  /football/players/search/{playerName}:
+    get:
+      operationId: getPlayerDetailByName
+      summary: Get Player Detail by name
+      description: Retrieve information about football player details by player name.
+      parameters:
+        - name: playerName
+          in: path
+          description: Name of the player for which we want to find details.
+          required: true
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          description: Authentication token
+          required: false
+          schema:
+            type: string
+            default: YiTwwzncvgAwNF6lseiPtGIox2fYekzTxXsLuESeUIZzUnWtXwHY3zVzDZXP
+            format: string
+      responses:
+        "200":
+          description: Successful response

@@ -1,0 +1,9 @@
+Descriptor:
+  Name: FirstRequest
+  DisplayName: My First Plugin (FirstRequest)
+  Description: Plugin for making request in sportmonks API to get sports related data
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://gitlab.cdsys.local/internstraining2024/stp_breakouttrainings_projects/int2024-sentinel-apps-for-alerts-event-monitoring/-/raw/Fenil-Copilot-Test/openapi.yaml
